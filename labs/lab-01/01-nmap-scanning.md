@@ -6,7 +6,7 @@ Some of the NMAP flags (Host Discovery) were not performing as expected, I'll ne
 * Use NMAP to scan the DVWA
 ### Info Given
 * Target IP range `<iprange>/24`
-* There seems to be an unsecure web-app being hosted by a examplecorp.com
+* There seems to be an unsecure web-app being hosted by a `examplecorp.com`
 
 ### Goal
 1. Find the IP addr of the vulnerable site
@@ -16,7 +16,20 @@ Some of the NMAP flags (Host Discovery) were not performing as expected, I'll ne
 Create a lab that demonstrates the difference between nmap flags and when to use them.
 
 `nmap -n -sn <iprange>/24`
+## Steps
+### Find the IP addr of the vulnerable site
+`ping examplecorp.com`
 
+### Attempt Host discovery
+`nmap -n -sn <ip>/24`  
+`nmap -n -Pn <ip>` OR `nmap -n -Pn examplecorp.com`  
+
+### Identify what port the vulnerable app is running on
+`nmap -n -sS <iprange>/24` OR `nmap -n -sS examplecorp.com`  
+`nmap -n -sT <iprange>/24` OR `nmap -n -sT examplecorp.com`  
+`nmap -n -sU <iprange>/24` OR `nmap -n -sU examplecorp.com`    
+
+## Index
 ### Host Discovery 
 - -sn : Ping Scan
     * This essentially does an ARP scan
@@ -46,26 +59,6 @@ Create a lab that demonstrates the difference between nmap flags and when to use
 - -sU: UDP
     * works by sending a UDP packet to every targeted port.
     * UDP scanning is generally slower and more difficult than TCP.
-- -sN: TCP NULL
-    * Doesnt set ANY TCP flags 
-    * Using NULL flags (NO FLAGS set) can help determine if a port is open or not. 
-    * any packet not containing SYN, RST, or ACK bits will result in a returned RST if the port is closed and no response at all if the port is open
-    * Does the same thing as `sF` & `sX`
-- -sF: TCP FIN
-    * Just Sets the FIN flag
-    * Using FIN flag can help determine if a port is open or not. 
-    * any packet not containing SYN, RST, or ACK bits will result in a returned RST if the port is closed and no response at all if the port is open
-    * Does the same thing as `sX` & `sN`
-- -sX: TCP XMAS
-    * Sets FIN, PSH, & URG TCP flags.
-    * Using FIN flag can help determine if a port is open or not. 
-    * any packet not containing SYN, RST, or ACK bits will result in a returned RST if the port is closed and no response at all if the port is open
-    * Does the same thing as `sF` & `sN`
-- -sA: TCP ACK
-    * This sets the TCP ACK flag. 
-    * This would normally be used to test for statefulness of a firewall. If a firewall is stateful, it would not let random TCP ACKs through, but a stateless would. 
-        - This can be useful if an attacker wants to interact with machines that are behind a firewall
-
 
 ### Service & Version Detection
 - -sV: Version Detection
