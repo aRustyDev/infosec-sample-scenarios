@@ -10,12 +10,13 @@ Some of the NMAP flags (Host Discovery) were not performing as expected, I'll ne
 
 ### Goal
 1. Find the IP addr of the vulnerable site
-2. Identify what port the vulnerable app is running on
-3. Identify what service/version is running the app
+2. Attempt host discovery
+3. Identify what port the vulnerable app is running on
+4. Identify what service/version is running the app
+5. Identify the OS of the host machine running the site
 
 Create a lab that demonstrates the difference between nmap flags and when to use them.
 
-`nmap -n -sn <iprange>/24`
 ## Steps
 ### Find the IP addr of the vulnerable site
 `ping examplecorp.com`
@@ -25,9 +26,11 @@ Create a lab that demonstrates the difference between nmap flags and when to use
 `nmap -n -Pn <ip>` OR `nmap -n -Pn examplecorp.com`  
 
 ### Identify what port the vulnerable app is running on
-`nmap -n -sS <iprange>/24` OR `nmap -n -sS examplecorp.com`  
-`nmap -n -sT <iprange>/24` OR `nmap -n -sT examplecorp.com`  
-`nmap -n -sU <iprange>/24` OR `nmap -n -sU examplecorp.com`    
+`nmap -sV <iprange>` OR `nmap -sV examplecorp.com`  
+
+### Identify the OS of the host machine running the site
+`nmap -O <iprange>` OR `nmap -O examplecorp.com`   
+`nmap -O --fuzzy <iprange>` OR `nmap -O --fuzzy examplecorp.com`  
 
 ## Index
 ### Host Discovery 
