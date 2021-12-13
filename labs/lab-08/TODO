@@ -1,0 +1,8 @@
+* --spoof-mac 
+* --proxies 
+* --ttl 
+* --badsum 
+* -S 
+* -D 
+* -f 
+* --mtu
