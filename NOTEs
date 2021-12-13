@@ -25,3 +25,10 @@
 
 
 # Need to store/persist data (pcap) on the host machine
+
+
+# Scenario 1 - Create a lab that demonstrates the difference between nmap flags and when to use them.
+# Scenario 2 - Create a lab that demonstrates IDS/IPS evasion techniques.
+# Scenario 3 - Create a lab that has a user configure a firewall, demonstrate how traffic flows before and after setting up the firewall.
+# Scenario 4 - Create a threat hunting lab using a .pcap file that illustrates malicious traffic on a computer.
+# Scenario 5 - Demonstrate the power of burp suite on a buggy web application.
