@@ -62,7 +62,9 @@ Create a lab that demonstrates the difference between nmap flags and when to use
     * any packet not containing SYN, RST, or ACK bits will result in a returned RST if the port is closed and no response at all if the port is open
     * Does the same thing as `sF` & `sN`
 - -sA: TCP ACK
-    * 
+    * This sets the TCP ACK flag. 
+    * This would normally be used to test for statefulness of a firewall. If a firewall is stateful, it would not let random TCP ACKs through, but a stateless would. 
+        - This can be useful if an attacker wants to interact with machines that are behind a firewall
 
 
 ### Service & Version Detection
