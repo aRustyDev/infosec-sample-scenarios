@@ -1,7 +1,7 @@
 # NMAP Scanning
 
 ### Disclaimer
-Some of the NMAP flags (Host Discovery) were not performing as expected, I'll need to do more research/troubleshooting to figure out why.
+    Some of the NMAP flags (Host Discovery) were not performing as expected, I'll need to do more research/troubleshooting to figure out why.
 
 * Use NMAP to scan the DVWA
 ### Info Given
@@ -15,9 +15,8 @@ Some of the NMAP flags (Host Discovery) were not performing as expected, I'll ne
 4. Identify what service/version is running the app
 5. Identify the OS of the host machine running the site
 
-Create a lab that demonstrates the difference between nmap flags and when to use them.
 
-## Steps
+# Steps
 ### Find the IP addr of the vulnerable site
 `ping examplecorp.com`
 
@@ -26,14 +25,19 @@ Create a lab that demonstrates the difference between nmap flags and when to use
 `nmap -n -Pn <ip>` OR `nmap -n -Pn examplecorp.com`  
 
 ### Identify what port the vulnerable app is running on
+`nmap -sS <ip>`  
+`nmap -sT <ip>` OR `nmap -sT examplecorp.com`  
+`nmap -sU <ip>` OR `nmap -sU examplecorp.com`  
+
+### Identify what service/version is running the app
 `nmap -sV <iprange>` OR `nmap -sV examplecorp.com`  
 
 ### Identify the OS of the host machine running the site
 `nmap -O <iprange>` OR `nmap -O examplecorp.com`   
 `nmap -O --fuzzy <iprange>` OR `nmap -O --fuzzy examplecorp.com`  
 
-## Index
-### Host Discovery 
+# Index
+## Host Discovery 
 - -sn : Ping Scan
     * This essentially does an ARP scan
     * Lets take a look at the Wireshark output
@@ -51,7 +55,7 @@ Create a lab that demonstrates the difference between nmap flags and when to use
     * This would normally be used to test for statefulness of a firewall. If a firewall is stateful, it would not let random TCP ACKs through, but a stateless would. 
         - This can be useful if an attacker wants to interact with machines that are behind a firewall
 
-### Port Scanning
+## Port Scanning
 - -sS: TCP SYN
     * SYN scan is the default scan 
     * allows clear, reliable differentiation between the open, closed, and filtered states
@@ -63,11 +67,11 @@ Create a lab that demonstrates the difference between nmap flags and when to use
     * works by sending a UDP packet to every targeted port.
     * UDP scanning is generally slower and more difficult than TCP.
 
-### Service & Version Detection
+## Service & Version Detection
 - -sV: Version Detection
     * Use to try and determine what version of the service is being served from the ports.
 
-### OS Detection
+## OS Detection
 - -O: 
     * Enables OS Detection
     * Uses TCP/IP stack fingerprinting. Sends a series of TCP/UDP packets and examines practically every bit in the responses. 
