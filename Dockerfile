@@ -8,7 +8,8 @@ RUN export DEBIAN_FRONTEND='noninteractive' && apt install -y apache2\
     php-gd \
     libapache2-mod-php \
     git \
-    tcpdump
+    tcpdump \
+    systemctl
 
 FROM build as config
 RUN cd ~ && git clone https://github.com/digininja/DVWA.git
@@ -25,7 +26,7 @@ RUN sed -i "s/$_DVWA[ \'recaptcha_private_key\' ]  = \'\';/$_DVWA[ \'recaptcha_p
 FROM config
 COPY ./scripts /scripts
 RUN chmod 744 /scripts/*
-RUN service apache2 start && service mysql start 
+RUN systemctl enable apache2 && systemctl enable mysql
 RUN /scripts/setup-mysql.sh
 EXPOSE 80
 CMD tcpdump -i eth0 -C 25 -w /var/log/pcap/dvwa & 
