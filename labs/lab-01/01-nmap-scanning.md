@@ -30,11 +30,11 @@
 `nmap -sU <ip>` OR `nmap -sU examplecorp.com`  
 
 ### Identify what service/version is running the app
-`nmap -sV <iprange>` OR `nmap -sV examplecorp.com`  
+`nmap -sV <ip>` OR `nmap -sV examplecorp.com`  
 
 ### Identify the OS of the host machine running the site
-`nmap -O <iprange>` OR `nmap -O examplecorp.com`   
-`nmap -O --fuzzy <iprange>` OR `nmap -O --fuzzy examplecorp.com`  
+`nmap -O <ip>` OR `nmap -O examplecorp.com`   
+`nmap -O --fuzzy <ip>` OR `nmap -O --fuzzy examplecorp.com`  
 
 # Index
 ## Host Discovery 
@@ -46,14 +46,6 @@
     * This option tells Nmap not to do a port scan after host discovery, and only print out the available hosts that responded to the host discovery probes.
     * Nmap continues to perform requested functions as if each target IP is active.
     * This means that if it is combined with A/sV/sS/sN etc it will continue to attempt the full scan w/o checking if the host is alive. This can help to identify services that are "hidden".
-- -PS : tcp syn
-    * Will send a TCP SYN packet to the top 1000 ports on each host, then close the connection with a RST packet.
-    * If the host responds with a SYN/ACK it will respond with an ACK
-    * This can be used to test the functionality of a host and its network connections
-- -PA : tcp ack
-    * This is supposed to set the ACK flag instead, but is being buggy. 
-    * This would normally be used to test for statefulness of a firewall. If a firewall is stateful, it would not let random TCP ACKs through, but a stateless would. 
-        - This can be useful if an attacker wants to interact with machines that are behind a firewall
 
 ## Port Scanning
 - -sS: TCP SYN
