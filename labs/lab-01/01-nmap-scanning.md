@@ -25,7 +25,7 @@
 `nmap -n -Pn <ip>` OR `nmap -n -Pn examplecorp.com`  
 
 ### Identify what port the vulnerable app is running on
-`nmap -sS <ip>`  
+`nmap -sS <ip>` OR `nmap -sS examplecorp.com`  
 `nmap -sT <ip>` OR `nmap -sT examplecorp.com`  
 `nmap -sU <ip>` OR `nmap -sU examplecorp.com`  
 
