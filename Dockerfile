@@ -1,6 +1,6 @@
 FROM ubuntu as build
 
-RUN apt update && apt upgrade
+RUN apt update && apt upgrade -y
 RUN export DEBIAN_FRONTEND='noninteractive' && apt install -y apache2\
     mysql-server \
     php \
