@@ -26,9 +26,9 @@ RUN export DEBIAN_FRONTEND='noninteractive' && apt install -y apache2\
 # FROM config
 COPY ./scripts /scripts
 RUN chmod 744 /scripts/entrypoint.sh
-# RUN chmod 744 /scripts/setup-mysql.sh
+# RUN chmod 744 /scripts/mysql.sh
 # RUN systemctl enable apache2 && systemctl enable mysql
-# RUN /scripts/setup-mysql.sh
+# RUN /scripts/mysql.sh
 EXPOSE 80
 # CMD tcpdump -i eth0 -C 25 -w /var/log/pcap/dvwa & 
 ENTRYPOINT ["/scripts/entrypoint.sh"]

@@ -1,0 +1,11 @@
+services:
+  mysql:
+    build: ./dev/mysql/Dockerfile
+    ports:
+      - "3306:3306"
+    volumes:
+      - "/data"
+  httpd:
+    build: ./dev/httpd/Dockerfile
+    ports:
+      - "80:80"
