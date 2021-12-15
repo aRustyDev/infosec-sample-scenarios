@@ -55,18 +55,17 @@ Once we know what services are likely running on the target, its a good idea to 
 ## Port Scanning
 - -sS: TCP SYN
     * SYN scan is the default scan 
-    * allows clear, reliable differentiation between the open, closed, and filtered states
-    * 
+    * Allows clear, reliable differentiation between the open, closed, and filtered states
 - -sT: TCP Connect
     * TCP connect scan is the default TCP scan type when a user does not have raw packet privileges.
     * This will attempt a complete 3 way Handshake (SYN, SYN/ACK, ACK (+RST))
 - -sU: UDP
-    * works by sending a UDP packet to every targeted port.
+    * Works by sending a UDP packet to every targeted port.
     * UDP scanning is generally slower and more difficult than TCP.
 
 ## Service & Version Detection
 - -sV: Version Detection
-    * Use to try and determine what version of the service is being served from the ports.
+    * Used to try and determine what version of the service is being served from the ports.
 
 ## OS Detection
 - -O: 
