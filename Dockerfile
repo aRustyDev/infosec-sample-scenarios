@@ -31,4 +31,4 @@ RUN chmod 744 /scripts/entrypoint.sh
 # RUN /scripts/setup-mysql.sh
 EXPOSE 80
 # CMD tcpdump -i eth0 -C 25 -w /var/log/pcap/dvwa & 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/scripts/entrypoint.sh"]
