@@ -25,9 +25,9 @@ RUN sed -i "s/$_DVWA[ \'recaptcha_private_key\' ]  = \'\';/$_DVWA[ \'recaptcha_p
 
 FROM config
 COPY ./scripts /scripts
-RUN chmod 744 /scripts/*
+RUN chmod 744 /scripts/setup-mysql.sh
 RUN systemctl enable apache2 && systemctl enable mysql
 RUN /scripts/setup-mysql.sh
 EXPOSE 80
-CMD tcpdump -i eth0 -C 25 -w /var/log/pcap/dvwa & 
+# CMD tcpdump -i eth0 -C 25 -w /var/log/pcap/dvwa & 
 # ENTRYPOINT ["/entrypoint.sh"]
