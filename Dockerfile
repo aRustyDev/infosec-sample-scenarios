@@ -23,7 +23,7 @@ RUN export DEBIAN_FRONTEND='noninteractive' && apt install -y apache2\
 # RUN sed -i "s/$_DVWA[ \'recaptcha_public_key\' ]  = \'\';/$_DVWA[ \'recaptcha_public_key\' ]  = \'6LdBxpcdAAAAAAlfIS5z6QjgTV2e0e_xh-sEW4Ql\';/" /etc/php/7.*/apache2/php.ini
 # RUN sed -i "s/$_DVWA[ \'recaptcha_private_key\' ]  = \'\';/$_DVWA[ \'recaptcha_private_key\' ] = \'6LdBxpcdAAAAAGUoKS-UB5ec1t5HT0i19bra4sQw\';/" /etc/php/7.*/apache2/php.ini
 
-FROM config
+# FROM config
 COPY ./scripts /scripts
 RUN chmod 744 /scripts/entrypoint.sh
 # RUN chmod 744 /scripts/setup-mysql.sh
