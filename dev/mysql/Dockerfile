@@ -1,3 +1,3 @@
 FROM mysql
-COPY ./scripts/mysql.sh /mysql.sh
-RUN chmod 744 /scripts/mysql.sh && /scripts/mysql.sh
+COPY ./scripts/mysql.sh /opt/scripts/mysql.sh
+RUN chmod 744 /opt/scripts/mysql.sh && /opt/scripts/mysql.sh
