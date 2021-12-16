@@ -4,7 +4,8 @@ RUN apt install -y php git
 
 FROM build as apache2
 RUN rm /usr/local/apache2/htdocs/index.html
-RUN cd /usr/local/apache2/htdocs && git clone https://github.com/digininja/DVWA.git
+RUN cd /opt && git clone https://github.com/digininja/DVWA.git
+RUN cp -r /opt/DVWA/* /usr/local/apache2/htdocs/
 COPY ./scripts/httpd.sh /opt/scripts/httpd.sh
 # RUN chmod 744 /opt/scripts/httpd.sh && /opt/scripts/httpd.sh
 # EXPOSE 80
