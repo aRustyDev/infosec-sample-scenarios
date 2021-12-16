@@ -1,5 +1,6 @@
 FROM httpd as build
 RUN apt update && apt upgrade -y
+RUN apt install -y php git
 
 FROM build as apache2
 RUN rm /usr/local/apache2/htdocs/index.html
