@@ -1,6 +1,6 @@
 FROM httpd as build
 RUN apt update && apt upgrade -y
-RUN apt install -y php git
+RUN apt install -y git php php-mysqli php-gd libapache2-mod-php
 
 FROM build as apache2
 RUN rm /usr/local/apache2/htdocs/index.html
