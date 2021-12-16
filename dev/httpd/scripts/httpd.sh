@@ -1,6 +1,4 @@
 #!/bin/bash
-rm /usr/local/apache2/htdocs/index.html
-cp -r /opt/dvwa/* /usr/local/apache2/htdocs/
 cd /usr/local/apache2/htdocs && cp config/config.inc.php.dist config/config.inc.php
 chmod 757 /usr/local/apache2/htdocs/hackable/uploads/
 chmod 646 /usr/local/apache2/htdocs/external/phpids/0.6/lib/IDS/tmp/phpids_log.txt 
