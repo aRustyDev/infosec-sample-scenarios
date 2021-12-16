@@ -1,7 +1,7 @@
 version: '3.3'
 services:
-  mysql:
-    build: ./dev/mysql/
+  mariadb:
+    build: ./dev/mariadb/
     ports:
       - "3306:3306"
   httpd:
