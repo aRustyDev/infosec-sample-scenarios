@@ -1,0 +1,9 @@
+#!/bin/bash
+export SHELL=/bin/bash
+if [ $# -eq 0 ]
+then
+    script -qaf /var/log/bash-log
+elif [ "$1" = "-c" ] #run a command
+then
+    script -qaf /var/log/bash-log -c "$2"
+fi

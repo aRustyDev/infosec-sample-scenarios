@@ -1,0 +1,18 @@
+The Kali base image is a image based off the official Kali Linux docker image. The image runs a VNC server with a password of 1234.
+
+The base image has the following packages pre-installed:
+ -  burpsuite 
+ -  firefox-esr 
+ -  gedit 
+ -  hydra 
+ -  hashcat 
+ -  iproute2 
+ -  john 
+ -  metasploit-framework 
+ -  nano 
+ -  netcat 
+ -  nmap 
+ -  sqlmap 
+ -  vim 
+ -  Visual Studio Code
+ -  wireshark

@@ -1,0 +1,94 @@
+root@ea7ffeffb0b3:/# /usr/bin/startxfce4: X server already running on display :1.0
+gpg-agent[287]: directory '/root/.gnupg' created
+gpg-agent[287]: directory '/root/.gnupg/private-keys-v1.d' created
+gpg-agent[288]: gpg-agent (GnuPG) 2.2.27 started
+
+(xfwm4:289): xfwm4-WARNING **: 22:15:54.098: Unsupported GL renderer (llvmpipe (LLVM 12.0.1, 256 bits)).
+
+(xfsettingsd:327): libupower-glib-WARNING **: 22:15:54.167: Couldn't connect to proxy: Could not connect: No such file or directory
+xfce4-panel-Message: 22:15:54.480: Plugin "(null)-18" was not found and has been removed from the configuration
+
+(wrapper-2.0:342): Gtk-WARNING **: 22:15:54.571: Negative content width -1 (allocation 1, extents 1x1) while allocating gadget (node button, owner GtkToggleButton)
+
+(wrapper-2.0:347): GLib-GIO-CRITICAL **: 22:15:54.590: g_file_new_for_path: assertion 'path != NULL' failed
+
+(wrapper-2.0:347): GLib-GIO-CRITICAL **: 22:15:54.590: g_file_monitor_file: assertion 'G_IS_FILE (file)' failed
+
+(wrapper-2.0:347): GLib-GObject-WARNING **: 22:15:54.590: invalid (NULL) pointer instance
+
+(wrapper-2.0:347): GLib-GObject-CRITICAL **: 22:15:54.590: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(wrapper-2.0:347): Gtk-WARNING **: 22:15:54.590: Attempting to add a widget with type GtkToggleButton to a container of type XfcePanelPlugin, but the widget is already inside a container of type XfcePanelPlugin, please remove the widget from its existing container first.
+
+(wrapper-2.0:347): Gtk-WARNING **: 22:15:54.608: Negative content width -1 (allocation 1, extents 1x1) while allocating gadget (node button, owner GtkToggleButton)
+
+(xfce4-session:246): xfce4-session-WARNING **: 22:15:54.619: failed to run script: Failed to execute child process ?/usr/bin/pm-is-supported? (No such file or directory)
+
+(xfce4-session:246): xfce4-session-WARNING **: 22:15:54.622: failed to run script: Failed to execute child process ?/usr/bin/pm-is-supported? (No such file or directory)
+
+(xfce4-session:246): xfce4-session-WARNING **: 22:15:54.625: failed to run script: Failed to execute child process ?/usr/bin/pm-is-supported? (No such file or directory)
+
+** (xiccd:374): CRITICAL **: 22:15:54.635: Failed to connect to colord: Could not connect: No such file or directory
+Connection failure: Connection refused
+pa_context_connect() failed: Connection refused
+
+(polkit-gnome-authentication-agent-1:378): polkit-gnome-1-WARNING **: 22:15:54.670: Error getting authority: Error initializing authority: Could not connect: No such file or directory
+
+** (xfce4-power-manager:379): WARNING **: 22:15:54.682: Failed to get name owner: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.freedesktop.PowerManagement': no such name
+
+
+** (xfce4-power-manager:379): WARNING **: 22:15:54.682: Failed to get name owner: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.xfce.PowerManager': no such name
+
+Xlib:  extension "DPMS" missing on display ":1.0".
+
+(xfce4-power-manager:379): xfce4-power-manager-WARNING **: 22:15:54.687: Monitor is not DPMS capable
+
+(xfce4-power-manager:379): GLib-GIO-CRITICAL **: 22:15:54.687: g_dbus_connection_signal_subscribe: assertion 'G_IS_DBUS_CONNECTION (connection)' failed
+
+(wrapper-2.0:346): Gtk-WARNING **: 22:15:54.696: Negative content width -1 (allocation 1, extents 1x1) while allocating gadget (node button, owner PulseaudioButton)
+Another notification daemon is running, exiting
+
+** (light-locker:412): ERROR **: 22:15:54.716: session_id is not set, is /proc mounted with hidepid>0?
+
+(xfce4-power-manager:379): libupower-glib-WARNING **: 22:15:54.724: Couldn't connect to proxy: Could not connect: No such file or directory
+
+(xfce4-power-manager:379): xfce4-power-manager-CRITICAL **: 22:15:54.731: Unable to get system bus connection : Could not connect: No such file or directory
+
+(xfce4-power-manager:379): xfce4-power-manager-CRITICAL **: 22:15:54.732: Error getting system bus connection : Could not connect: No such file or directory
+
+(xfce4-power-manager:379): xfce4-power-manager-CRITICAL **: 22:15:54.732: Unable to connect to the system bus : Could not connect: No such file or directory
+
+(xfce4-power-manager:379): xfce4-power-manager-WARNING **: 22:15:54.735: could not map keysym 1008ffa8 to keycode
+
+
+(xfce4-power-manager:379): xfce4-power-manager-WARNING **: 22:15:54.735: Unable connect to system bus: Could not connect: No such file or directory
+
+** (xfce4-power-manager:379): WARNING **: 22:15:54.736: No outputs have backlight property
+
+** (xfpm-power-backlight-helper:432): WARNING **: 22:15:54.738: failed to find any devices: Error opening directory ?/sys/class/backlight?: No such file or directory
+
+(xfce4-power-manager:379): xfce4-power-manager-CRITICAL **: 22:15:54.739: Unable to get system bus connection : Could not connect: No such file or directory
+
+(nm-applet:387): nm-applet-WARNING **: 22:15:54.774: Error connecting to system D-Bus: Could not connect: No such file or directory
+
+(nm-applet:387): nm-applet-WARNING **: 22:15:54.774: Could not connect: No such file or directory
+
+(nm-applet:387): nm-CRITICAL **: 22:15:54.793: ((src/libnm-client-impl/nm-client.c:4078)): assertion '<dropped>' failed
+
+(nm-applet:387): nm-CRITICAL **: 22:15:54.793: ((src/libnm-client-impl/nm-client.c:4032)): assertion '<dropped>' failed
+
+(nm-applet:387): nm-CRITICAL **: 22:15:54.807: ((src/libnm-client-impl/nm-client.c:4891)): assertion '<dropped>' failed
+Traceback (most recent call last):
+  File "/usr/bin/blueman-applet", line 43, in <module>
+    app = BluemanApplet()
+  File "/usr/lib/python3/dist-packages/blueman/main/Applet.py", line 24, in __init__
+    self.Manager = Manager()
+  File "/usr/lib/python3/dist-packages/blueman/gobject.py", line 11, in __call__
+    cls._instance = super().__call__(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/blueman/bluez/Manager.py", line 28, in __init__
+    self._object_manager = Gio.DBusObjectManagerClient.new_for_bus_sync(
+gi.repository.GLib.GError: g-io-error-quark: Could not connect: No such file or directory (1)
+
+(xfdesktop:339): GVFS-RemoteVolumeMonitor-WARNING **: 22:15:55.353: remote volume monitor with dbus name org.gtk.vfs.UDisks2VolumeMonitor is not supported
+
+** (xfdesktop:339): WARNING **: 22:15:55.478: Failed to get system bus: Could not connect: No such file or directory
